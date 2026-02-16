@@ -23,7 +23,7 @@ document.getElementById('start').onclick = () => {
 document.getElementById('stop').onclick = () => {
     if (running) {
         clearInterval(interval);
-        running = false;
+        running = true;
     }
 };
 
