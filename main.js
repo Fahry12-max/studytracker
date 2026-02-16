@@ -23,13 +23,13 @@ document.getElementById('start').onclick = () => {
 document.getElementById('stop').onclick = () => {
     if (running) {
         clearInterval(interval);
-        running = true;
+        running = false;
     }
 };
 
 document.getElementById('reset').onclick = () =>{
     clearInterval(interval);
-    running = false;
+    running = true;
     elapsedSeconds = 0;
     document.getElementById('display').textContent = '00:00:00';
 }; 
