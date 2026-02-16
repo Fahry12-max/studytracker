@@ -11,7 +11,7 @@ let elapsedSeconds = 0;
 
 document.getElementById('start').onclick = () => {
     if (!running){
-        running = false;
+        running = true;
         startTime = Date.now() - elapsedSeconds * 1000;
         interval = setInterval(() => {
             elapsedSeconds = Math.floor((Date.now() - startTime) / 1000);
@@ -23,13 +23,13 @@ document.getElementById('start').onclick = () => {
 document.getElementById('stop').onclick = () => {
     if (running) {
         clearInterval(interval);
-        running = true;
+        running = false;
     }
 };
 
 document.getElementById('reset').onclick = () =>{
     clearInterval(interval);
-    running = true;
+    running = false;
     elapsedSeconds = 0;
     document.getElementById('display').textContent = '00:00:00';
 }; 
