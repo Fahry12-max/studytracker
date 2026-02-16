@@ -12,7 +12,6 @@ let elapsedSeconds = 0;
 document.getElementById('start').onclick = () => {
     if (!running){
         running = true;
-        clearInterval(interval);
         startTime = Date.now() - elapsedSeconds * 1000;
         interval = setInterval(() => {
             elapsedSeconds = Math.floor((Date.now() - startTime) / 1000);
